@@ -1,0 +1,35 @@
+<%- include('../lesheader');-%>
+<div class="container">
+  <div class="row">
+    <h1><%= checker %></h1>
+
+    <% if (checker === 'You can now proceed to the next lesson.') { %>
+    <button class="btn btn-primary btn-submit" type="submit" name="button">
+      <a href="/<%= l1Next %>" class="text-warning"> Next </a>
+    </button>
+    <%}else{%>
+
+
+  </div>
+<div class="row">
+      <div class="img-container ml-3 p-5">
+      <h1 class="hint">Hint:</h1>
+      <!-- <img src="<%= l1ActivityHint %>" class="img-fluid" alt="" /> -->
+      <!-- <h2 class="text-white"><%= l1ActivityHint %></h2> -->
+        <!-- <ol> -->
+          <%for(var i=0;i<l1ActivityHint.length;i++){%>
+            <!-- <li> -->
+              <h5 class="text-danger"><%= l1ActivityHint[i] %></h5>
+            <!-- </li> -->
+            <%}%>
+          <!-- </ol> -->
+    </div>
+</div>
+
+  <button class="btn btn-primary btn-submit m-3" type="submit" name="button">
+    <a href="/les2/<%= l1Prev %>" class="text-warning"> Back </a>
+  </button>
+  <%}%>
+</div>
+
+<script src="/public/js/index.js"></script>

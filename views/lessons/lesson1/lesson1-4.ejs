@@ -1,0 +1,28 @@
+<%- include('../lesheader');-%> <%- include('lesson1Nav');-%>
+
+<div class="container">
+  <!--  -->
+  <div class="row">
+    <h1 class="display-1"><%= l1Title %></h1>
+  </div>
+
+  <div class="row">
+    <div class="col-10 mx-auto">
+
+      <img src="/img/l1-4.png" class="img-fluid my-5" alt="">
+      <ul>
+         <%for(var i=0;i<l1Content.length;i++){%>
+           <li>
+             <p class="h3 text-capitalize"><%= l1Content[i] %></p>
+            </li>
+            <%}%>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+<%- include('../lesfooter'); -%>

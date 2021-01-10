@@ -1,0 +1,66 @@
+<%- include('../lesheader');-%> <%- include('lesson3Nav');-%>
+
+<div class="container">
+  <div class="row">
+    <h1 class="display-1"><%= l1Title %></h1>
+  </div>
+
+  <div class="row">
+    <div class="col-10 mx-auto py-3"> 
+          <%for(var i=0;i<l1Content.length;i++){%>
+              <h4 class="text-warning"><%= l1Content[i] %></h4>
+            <%}%>
+    </div>
+  </div>
+
+  <div class="quiz-group">
+    <div class="row mr-5 mt-5">
+      <div class="col-10 d-inline-block mx-auto">
+        <h2 class="text-uppercase display-3 text-primary text-weight-bold ml-5">
+          your turn to try!
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 mx-auto py-3">
+        <form action="/les3/l1" method="POST" id="form">
+          <div class="form-group">
+            <div class="quiz-label mb-2">
+              <h3 class="text-capitalize text-danger">
+                <span class="quiz-icon text-warning">
+                  <i class="fa fa-info"></i>
+                </span>
+                
+      <h3 class="text-danger">Create the HTML framework lesson.</h3>
+        <ol>
+          <%for(var i=0;i<l1Activity.length;i++){%>
+            <li class="text-danger"  >
+              <h4 "><%= l1Activity[i] %></h4>
+            </li>
+            <%}%>
+          </ol>
+              </h3>
+            </div>
+            <textarea
+              name="inputMsg"
+              id=""
+              cols="30"
+              rows="10"
+              class="form-control"
+            ></textarea>
+          </div>
+          <button
+            class="btn btn-primary btn-submit"
+            type="submit"
+            name="button"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/public/js/index.js"></script>
